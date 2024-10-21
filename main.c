@@ -8,7 +8,7 @@ int main() {
     int cantidad;
 
 
-    // Solicitar la cantidad de productos y validar con do-while
+    // Solicitar la cantidad de productos 
     do {
         printf("¿Cuántos productos quieres ingresar?, Ingrese un numero entero (1 a 10): ");
         int validacion = scanf("%d", &cantidad);
