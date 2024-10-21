@@ -79,11 +79,17 @@ float calcularPrecioPromedio(float precios[10], int cantidad) {
 }
 
 void buscarProducto(char productos[10][50], float precios[10], int cantidad, char nombre[50]) {
+    int encontrado = 0;  // Variable para indicar si se encontró el producto
+    
     for (int i = 0; i < cantidad; i++) {
-        if (strcmp(productos[i], nombre) == 0) {
+        if (strcmp(productos[i], nombre) == 0) {   //Comparar cadenas
             printf("El precio del producto %s es: %.2f\n", productos[i], precios[i]);
-            return;
+            encontrado = 1;  // Se marca como encontrado
+            break;  // Detener la búsqueda una vez encontrado
         }
     }
-    printf("Producto no encontrado\n");
+
+    if (!encontrado) {  // Si no se encontró el producto
+        printf("Producto no encontrado\n");
+    }
 }
